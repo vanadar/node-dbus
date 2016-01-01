@@ -230,7 +230,7 @@ namespace Connection {
 		if (sender)
 			senderValue = Nan::New<String>(sender).ToLocalChecked();
 
-		Handle<Value> info[] = {
+		Local<Value> info[] = {
 			Nan::New<String>(dbus_bus_get_unique_name(connection)).ToLocalChecked(),
 			senderValue,
 			Nan::New<String>(object_path).ToLocalChecked(),
